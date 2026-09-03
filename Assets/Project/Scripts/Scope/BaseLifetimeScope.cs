@@ -1,5 +1,7 @@
 using VContainer;
 using VContainer.Unity;
+using Project.Scripts.Application.Service;
+using Project.Scripts.Application.ViewModel;
 
 namespace Project.Scripts.Scope
 {
@@ -9,7 +11,16 @@ namespace Project.Scripts.Scope
     {
         protected override void Configure(IContainerBuilder builder)
         {
-            // TODO: Repository / DataSource / 全シーン共通 Service・ViewModel をここで登録する
+            // Service
+            builder.Register<SceneNavigatorService>(Lifetime.Transient);
+            builder.Register<BlockerService>(Lifetime.Singleton);
+            builder.Register<BlackCurtainService>(Lifetime.Singleton);
+
+            // ViewModel
+            builder.Register<BlockerViewModel>(Lifetime.Singleton);
+            builder.Register<BlackCurtainViewModel>(Lifetime.Singleton);
+
+            // TODO: Repository / DataSource もここで登録する
         }
     }
 }

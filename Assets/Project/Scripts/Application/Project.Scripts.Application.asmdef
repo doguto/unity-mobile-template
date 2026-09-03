@@ -6,7 +6,8 @@
         "GUID:c07b194726f14d3d9eb648a5c2914073",
         "GUID:f3a564df6d734d0d9ed686771d84b8b7",
         "VContainer",
-        "UniTask"
+        "UniTask",
+        "LitMotion"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
