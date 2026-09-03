@@ -7,7 +7,8 @@
         "GUID:6ea6c61753b94b39a8359eb4980cde9b",
         "GUID:f3a564df6d734d0d9ed686771d84b8b7",
         "VContainer",
-        "UniTask"
+        "UniTask",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
