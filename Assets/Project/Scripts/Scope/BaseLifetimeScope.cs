@@ -2,6 +2,8 @@ using VContainer;
 using VContainer.Unity;
 using Project.Scripts.Application.Service;
 using Project.Scripts.Application.ViewModel;
+using Project.Scripts.Infrastructure;
+using Project.Scripts.Repository;
 
 namespace Project.Scripts.Scope
 {
@@ -20,7 +22,14 @@ namespace Project.Scripts.Scope
             builder.Register<BlockerViewModel>(Lifetime.Singleton);
             builder.Register<BlackCurtainViewModel>(Lifetime.Singleton);
 
-            // TODO: Repository / DataSource もここで登録する
+            // Infrastructure
+            builder.Register<GameDatabase>(Lifetime.Singleton);
+
+            // Repository
+            builder.Register<MasterDataCacheRepository>(Lifetime.Singleton).AsImplementedInterfaces();
+            builder.Register<SetupDatabaseRepository>(Lifetime.Singleton).AsImplementedInterfaces();
+
+            // TODO: DataSource / EntityRepository / QueryRepository もここで登録する
         }
     }
 }

@@ -2,7 +2,8 @@
     "name": "Project.Scripts.Infrastructure",
     "rootNamespace": "",
     "references": [
-        "GUID:b1ac5c2a6a5c4166983ef4ea7ceff5b5"
+        "GUID:b1ac5c2a6a5c4166983ef4ea7ceff5b5",
+        "GUID:cde5950c5a011d345a125f456053102f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
