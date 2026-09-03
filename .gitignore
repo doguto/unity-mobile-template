@@ -109,5 +109,7 @@ InitTestScene*.unity*
 
 # === User Customization ===
 
+.idea/
+
 bash.exe.stackdump
 
