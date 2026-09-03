@@ -1,0 +1,21 @@
+{
+    "name": "Project.Scripts.View",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b1ac5c2a6a5c4166983ef4ea7ceff5b5",
+        "GUID:c07b194726f14d3d9eb648a5c2914073",
+        "GUID:6ea6c61753b94b39a8359eb4980cde9b",
+        "GUID:f3a564df6d734d0d9ed686771d84b8b7",
+        "VContainer",
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

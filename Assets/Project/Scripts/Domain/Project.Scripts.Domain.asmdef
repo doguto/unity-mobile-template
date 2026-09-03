@@ -1,0 +1,17 @@
+{
+    "name": "Project.Scripts.Domain",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b1ac5c2a6a5c4166983ef4ea7ceff5b5",
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Project.Scripts.Scope",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b1ac5c2a6a5c4166983ef4ea7ceff5b5",
+        "GUID:c07b194726f14d3d9eb648a5c2914073",
+        "GUID:c304ffdd2887407b902d22e5e725c198",
+        "GUID:bc79a1547d5d44cfb433d4c076141d95",
+        "GUID:6ea6c61753b94b39a8359eb4980cde9b",
+        "GUID:f3a564df6d734d0d9ed686771d84b8b7",
+        "GUID:b34b4035941f46059728efaeac337b9e",
+        "VContainer"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

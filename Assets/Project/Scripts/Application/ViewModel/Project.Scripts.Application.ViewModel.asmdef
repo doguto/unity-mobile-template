@@ -1,0 +1,16 @@
+{
+    "name": "Project.Scripts.Application.ViewModel",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b1ac5c2a6a5c4166983ef4ea7ceff5b5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
