@@ -24,12 +24,13 @@ namespace Project.Scripts.Scope
 
             // Infrastructure
             builder.Register<GameDatabase>(Lifetime.Singleton);
+            builder.Register<RuntimeDatabase>(Lifetime.Singleton);
 
             // Repository
             builder.Register<MasterDataCacheRepository>(Lifetime.Singleton).AsImplementedInterfaces();
             builder.Register<SetupDatabaseRepository>(Lifetime.Singleton).AsImplementedInterfaces();
 
-            // TODO: DataSource / EntityRepository / QueryRepository もここで登録する
+            // TODO: EntityRepository / QueryRepository もここで登録する
         }
     }
 }
