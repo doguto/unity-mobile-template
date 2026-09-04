@@ -6,8 +6,6 @@ using Project.Scripts.Core.Constant;
 
 namespace Project.Scenes.Entry.Scripts.Application.UseCase
 {
-    // 実機起動時のエントリポイント。Global -> 初期シーンの順にAdditiveロードしてから
-    // 自分自身(Entry)をアンロードする。Editor単体プレイ時はGameBootStrapperがフォールバックする
     public class LoadInitialScenesUseCase : IAsyncStartable
     {
         public async UniTask StartAsync(CancellationToken cancellationToken)

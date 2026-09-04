@@ -114,5 +114,7 @@ InitTestScene*.unity*
 [Aa]ssets/_Recovery/
 [Aa]ssets/_Recovery.meta
 
+[Bb]uilds/
+
 bash.exe.stackdump
 
