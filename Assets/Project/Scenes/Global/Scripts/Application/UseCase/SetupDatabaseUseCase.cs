@@ -1,27 +1,34 @@
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
-using Project.Scripts.Application.UseCase;
+using VContainer.Unity;
+using Project.Scripts.Application.Service;
 using Project.Scripts.Domain.Repository;
 
 namespace Project.Scenes.Global.Scripts.Application.UseCase
 {
-    public class SetupDatabaseUseCase : InitializeUseCase
+    public class SetupDatabaseUseCase : IAsyncStartable
     {
         readonly IMasterDataCacheRepository masterDataCacheRepository;
         readonly ISetupDatabaseRepository setupDatabaseRepository;
+        readonly MasterDataReadyGate masterDataReadyGate;
 
         public SetupDatabaseUseCase(
             IMasterDataCacheRepository masterDataCacheRepository,
-            ISetupDatabaseRepository setupDatabaseRepository
+            ISetupDatabaseRepository setupDatabaseRepository,
+            MasterDataReadyGate masterDataReadyGate
         )
         {
             this.masterDataCacheRepository = masterDataCacheRepository;
             this.setupDatabaseRepository = setupDatabaseRepository;
+            this.masterDataReadyGate = masterDataReadyGate;
         }
 
-        protected override void Execute()
+        public async UniTask StartAsync(CancellationToken cancellationToken)
         {
-            var dataBinary = masterDataCacheRepository.Load();
+            var dataBinary = await masterDataCacheRepository.LoadAsync();
             setupDatabaseRepository.SetupDatabase(dataBinary);
+            masterDataReadyGate.Complete();
             Debug.Log("Database Setup.");
         }
     }

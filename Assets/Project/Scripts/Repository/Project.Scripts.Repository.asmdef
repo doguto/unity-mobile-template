@@ -5,7 +5,10 @@
         "GUID:b1ac5c2a6a5c4166983ef4ea7ceff5b5",
         "GUID:c07b194726f14d3d9eb648a5c2914073",
         "GUID:c304ffdd2887407b902d22e5e725c198",
-        "UniTask"
+        "UniTask",
+        "UniTask.Addressables",
+        "Unity.Addressables",
+        "Unity.ResourceManager"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

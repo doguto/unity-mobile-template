@@ -23,6 +23,9 @@ namespace Project.Editor
                 if (scene.name == entrySceneName) return;
             }
 
+            // 注意: この経路は LoadInitialScenesUseCase と違い、Global ロード後・単体シーン実行前に
+            // マスタデータ準備完了(MasterDataReadyGate)を待ち合わせる隙間が無い。
+            // 単体シーンは既にロードが始まっているため。実用上は数フレームで解決するため許容している
             Debug.Log("[GameBootStrapper] Loading GlobalScene...");
             SceneManager.LoadScene(globalSceneName, LoadSceneMode.Additive);
         }

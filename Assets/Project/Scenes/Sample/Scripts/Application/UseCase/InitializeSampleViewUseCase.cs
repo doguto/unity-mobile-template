@@ -4,7 +4,8 @@ using Project.Scripts.Application.UseCase;
 
 namespace Project.Scenes.Sample.Scripts.Application.UseCase
 {
-    // シーン表示直後、まだボタンを押していない状態(Count = 0)の Name を初期表示する
+    // シーン表示直後、まだボタンを押していない状態(Count = 0)の Name を初期表示する。
+    // マスタデータが読み込み済みであることは呼び出し側(LoadInitialScenesUseCase)が保証する前提
     public class InitializeSampleViewUseCase : InitializeUseCase
     {
         readonly SampleViewModel viewModel;

@@ -17,6 +17,7 @@ namespace Project.Scripts.Scope
             builder.Register<SceneNavigatorService>(Lifetime.Transient);
             builder.Register<BlockerService>(Lifetime.Singleton);
             builder.Register<BlackCurtainService>(Lifetime.Singleton);
+            builder.Register<MasterDataReadyGate>(Lifetime.Singleton);
 
             // ViewModel
             builder.Register<BlockerViewModel>(Lifetime.Singleton);
