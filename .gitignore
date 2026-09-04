@@ -111,5 +111,8 @@ InitTestScene*.unity*
 
 .idea/
 
+[Aa]ssets/_Recovery/
+[Aa]ssets/_Recovery.meta
+
 bash.exe.stackdump
 
