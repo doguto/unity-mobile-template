@@ -23,13 +23,14 @@ namespace Project.Scenes.Entry.Scripts.Application.UseCase
             var entrySceneName = SceneType.Entry.ToString();
 
             await SceneManager.LoadSceneAsync(globalSceneName, LoadSceneMode.Additive).ToUniTask(cancellationToken: cancellationToken);
+
+            // Globalシーン起動時にDBのセットアップが走るので待機する
             await masterDataReadyGate.WaitAsync().AttachExternalCancellation(cancellationToken);
             await SceneManager.LoadSceneAsync(firstSceneName, LoadSceneMode.Additive).ToUniTask(cancellationToken: cancellationToken);
 
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(firstSceneName));
 
-            // Entry シーン自身をアンロードする操作。ここで scope 由来の cancellationToken を渡すと、
-            // アンロードが EntrySceneLifetimeScope 自身を破棄してtoken自身をキャンセルしてしまい、
+            // ここで scope 由来の cancellationToken を渡すと、Unload が EntrySceneLifetimeScope 自身を破棄してtoken自身を Cancell してしまい、
             // 完了を待っているこのawaitがOperationCanceledExceptionになる自己参照になるため渡さない
             await SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(entrySceneName)).ToUniTask();
         }
